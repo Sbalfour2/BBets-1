@@ -22,14 +22,16 @@ Instuctor has done this 15 times,
 ```{r}
 days = 1:365
 
+nStudents = 29
+nBets = 1000
 saveArray=vector('numeric')
 for(k in 1:1000){
   bank = 0
-  for(i in 1:525){
-    sampleClass = sample(days, 35, replace = TRUE)
+  for(i in 1:nBets){
+    sampleClass = sample(days, 29, replace = TRUE)
 
     repeats = length(unique(sampleClass))
-    if (repeats == 35) bank = bank - 2
+    if (repeats == 29) bank = bank - 2
     else bank = bank + 1
   }
 saveArray[k]= bank
@@ -45,9 +47,21 @@ hist(saveArray)
 
 Answer questions #1
 
+with 35 students and payoff of 2:1, Dr. J makes on average $235  
+
 ```{r}
 print('average amt:')
 print(mean(saveArray))
 ```
 
-  
+
+the amount of $ Dr J should pay 35.00
+
+Answer questions #2
+
+
+looks like $4.50  is about right
+
+# Answer to question 3
+
+around 29 students
